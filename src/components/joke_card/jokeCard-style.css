@@ -1,0 +1,38 @@
+.card {
+  transition: 0.3s;
+  width: 30%;
+  margin: 10px 16px 20px 0px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card .card-container {
+  padding: 10px 10px;
+  font-size: 13px;
+}
+.card .card-container p {
+  padding-top: 10px;
+}
+.card .card-container b {
+  font-size: 17px;
+}
+.card .card-container .seeStats {
+  padding-bottom: 0;
+  margin-left: 50%;
+}
+
+@media (max-width: 1124px) {
+  .card {
+    width: 50%;
+    transition: all 0.5s;
+  }
+}
+@media (max-width: 390px) {
+  .card {
+    width: 100%;
+    transition: all 0.5s;
+  }
+  .card .card-container h4 b {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=jokeCard-style.css.map */

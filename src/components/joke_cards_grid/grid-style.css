@@ -1,0 +1,28 @@
+.bar {
+  border-top: 1px solid rgba(168, 163, 163, 0.3);
+}
+
+.cards-container, .bar {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.cards-container {
+  margin-top: 20px;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.see-more-btn {
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+.see-more-btn .pageNumber {
+  margin-top: 43px;
+}
+
+@media (max-width: 390px) {
+  .pageNumber {
+    font-size: 7px;
+  }
+}/*# sourceMappingURL=grid-style.css.map */

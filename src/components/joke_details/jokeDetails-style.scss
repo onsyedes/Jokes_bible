@@ -1,0 +1,81 @@
+
+@import '../../styles/variables/variables.scss';
+@import "../top10_categories/top10-style.scss";
+.cardXL{
+    
+    padding: 20px ;
+   
+}
+
+.flex{
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+   .rightArrow{
+  float: right;
+   }
+   .leftArrow{
+    float: left;
+   }
+   .rightArrow , .leftArrow{
+    cursor: pointer;
+   }
+}
+.popularity-label{
+    display: inline-flex;
+    font-size: 13px;
+}
+.jokeTitle{
+    color: $title-color;
+    font-weight: bold;
+    font-size: 30px;
+}
+.joke-range{
+    color: $title-color;
+    padding-top: 15px;
+}
+.thumb-btn{
+    border-radius: 20px;
+    padding: 9px;
+    border:none;
+    cursor: pointer;
+}
+
+.like-btn{
+    background-color: $green-normal;
+    &:hover{
+        background-color: $green-hover;
+    }
+}
+.dislike-btn{
+    margin-left: 40px;
+    background-color: $red-normal;
+   
+    &:hover{
+        background-color: $red-hover;
+    }
+}
+
+@media(max-width:390px){
+    .jokeTitle{
+       
+        
+        font-size: 20px;
+    }
+    .joke-range{
+        font-size: 14px;
+        padding-top: 30px;
+    }
+    
+    
+   
+    .dislike-btn{
+        margin-left: 0px;
+     
+    }
+    .inline{
+        justify-content: space-around;
+    }
+}

@@ -1,0 +1,36 @@
+@import '../button-style';
+.iconBtn{
+    @extend .btn;
+    color: #cfb995 !important;
+    border: 1px solid #cfb995 ;
+    background-color: transparent  !important;
+    &:disabled{
+        pointer-events: auto !important;
+        cursor: not-allowed !important;
+    }
+   
+}
+
+
+
+
+@media (max-width: 1124px){
+    .iconBtn{
+        font-size: 12px;
+        width: 103px;
+    height: 50px;
+    padding-bottom: 10px;
+    }
+    }
+@media (max-width: 390px){
+    .iconBtn{
+        font-size: 9px;
+        width: 80px;
+    height: 30px;
+    text-align: center;
+    padding : 0px 9px 0px 9px ;
+    
+    // padding-right: 10px;
+    // padding-bottom: 10px;
+    }
+    }

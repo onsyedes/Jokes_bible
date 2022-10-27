@@ -1,0 +1,22 @@
+.cardXL {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  margin: 10px 16px 20px 0px;
+}
+.cardXL .card-container {
+  padding: 10px 10px;
+  font-size: 13px;
+}
+.cardXL .card-container p {
+  padding-top: 10px;
+}
+
+h5 {
+  font-weight: bolder;
+}
+
+a {
+  line-height: 1.8;
+  color: inherit;
+}/*# sourceMappingURL=top10-style.css.map */

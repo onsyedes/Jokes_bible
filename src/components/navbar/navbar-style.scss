@@ -1,0 +1,149 @@
+
+@import '../../styles/variables/variables.scss' ;
+
+nav {
+  
+ 
+   width: 100%;
+   height: 57px;
+   background-color : $primary-color;
+     
+       ul{
+      float:right;
+      margin-right: 10px;
+      li{
+         display: inline-block;
+       padding-left: 30px;
+         margin: 0 5px;
+         .link {
+            padding-left: 20px;
+            color: white;
+            position: relative;
+             font-size: 15px;
+             margin: 20px 64px 16px 0px;
+             
+            }
+         &:hover {
+            background-color: $active-link-bg;
+            transition: .5s;
+         }
+      }
+     
+    
+     }
+    
+
+      .checkbtn{
+      
+         display: none;
+        
+      }
+   
+    #check{
+      display: none;
+    }
+   
+}
+
+.dropdown{
+  
+   position: relative;
+display: inline-block ;
+&:hover{
+   .dropdown-content {display: block;}
+}
+
+} 
+.dropdown-content {
+    margin-top: 10px;
+   display: none;
+   position: absolute;
+   border-radius: 3px;
+   background-color: white;
+    padding: 10px  40px;
+    z-index: 1;
+  
+   a{
+      width: 100%;
+      color:black ;
+      text-decoration: none;
+      display: block;
+      &:hover{
+         background-color: $white;
+      }
+   }
+
+
+
+
+   &::before {
+      content: "";
+      position: absolute;
+      border-color: rgba(194, 225, 245, 0);
+      border: solid transparent;
+      border-bottom-color: white;
+      border-width: 11px;
+      margin-left: -10px;
+      top: -21px;
+      right: 65px;
+      z-index: 1;
+    } 
+    
+    &::after {
+        content: "";
+        position: absolute;
+        right: 66px;
+        top: -21px;
+        width: 0;
+        height: 0;
+        border: solid transparent;
+        border-width: 10px;
+        border-bottom-color: #2B1A41;
+        z-index: 0;
+    }
+  
+ }
+
+
+
+@media (max-width: 952px){
+   .checkbtn{
+      display: block  !important;
+      padding-top: 20px;
+   }
+   nav ul li .link{
+      font-weight: 300;
+      font-size: 13px;
+      // padding: 0px ;
+      
+   }
+   nav{
+      width: 100%;
+   }
+}
+@media (max-width:858px){
+   .checkbtn{
+      display: block;
+   }
+   ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: $primary-color;
+      top:80px;
+      left:0;
+      transition: all .5s;
+      text-align: center;
+   }
+   nav ul li{
+     
+      padding: 10px 0px;
+      display: block;
+      .link{
+         font-size: 13px;
+      }
+   }
+   
+}
+
+

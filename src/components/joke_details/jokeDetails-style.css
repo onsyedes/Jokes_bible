@@ -1,0 +1,97 @@
+.cardXL {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  margin: 10px 16px 20px 0px;
+}
+.cardXL .card-container {
+  padding: 10px 10px;
+  font-size: 13px;
+}
+.cardXL .card-container p {
+  padding-top: 10px;
+}
+
+h5 {
+  font-weight: bolder;
+}
+
+a {
+  line-height: 1.8;
+  color: inherit;
+}
+
+.cardXL {
+  padding: 20px;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.flex .rightArrow {
+  float: right;
+}
+.flex .leftArrow {
+  float: left;
+}
+.flex .rightArrow, .flex .leftArrow {
+  cursor: pointer;
+}
+
+.popularity-label {
+  display: inline-flex;
+  font-size: 13px;
+}
+
+.jokeTitle {
+  color: #cfb995;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.joke-range {
+  color: #cfb995;
+  padding-top: 15px;
+}
+
+.thumb-btn {
+  border-radius: 20px;
+  padding: 9px;
+  border: none;
+  cursor: pointer;
+}
+
+.like-btn {
+  background-color: #68b680;
+}
+.like-btn:hover {
+  background-color: #46915d;
+}
+
+.dislike-btn {
+  margin-left: 40px;
+  background-color: #ff3750;
+}
+.dislike-btn:hover {
+  background-color: #ce2c40;
+}
+
+@media (max-width: 390px) {
+  .jokeTitle {
+    font-size: 20px;
+  }
+  .joke-range {
+    font-size: 14px;
+    padding-top: 30px;
+  }
+  .dislike-btn {
+    margin-left: 0px;
+  }
+  .inline {
+    justify-content: space-around;
+  }
+}/*# sourceMappingURL=jokeDetails-style.css.map */

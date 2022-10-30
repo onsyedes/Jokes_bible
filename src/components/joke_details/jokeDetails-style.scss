@@ -41,6 +41,9 @@
     padding: 9px;
     border:none;
     cursor: pointer;
+    &:disabled{
+        cursor: not-allowed;
+    }
 }
 
 .like-btn{

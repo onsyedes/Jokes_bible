@@ -18,11 +18,6 @@
   border: 1px solid rgb(4, 4, 54);
 }
 
-@media (max-width: 390px) {
-  .btn, .iconBtn {
-    padding: 0px 9px 0px 9px;
-  }
-}
 .iconBtn {
   color: #cfb995 !important;
   border: 1px solid #cfb995;

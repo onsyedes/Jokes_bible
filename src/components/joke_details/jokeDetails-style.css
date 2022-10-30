@@ -64,6 +64,9 @@ a {
   border: none;
   cursor: pointer;
 }
+.thumb-btn:disabled {
+  cursor: not-allowed;
+}
 
 .like-btn {
   background-color: #68b680;

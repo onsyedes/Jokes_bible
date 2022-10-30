@@ -1,6 +1,6 @@
 import React ,{useEffect} from 'react'
 import { useSelector ,useDispatch} from 'react-redux';
-import { useNavigate } from "react-router-dom";
+import {reducers} from "../../features/jokes/jokes-slice"
 import Badge from '../badge/Badge.jsx'
 import './jokeDetails-style.css'
 import arrowLeft from '../../assets/assets_Homework_Front-End_02/arrow-left@2x.png'
@@ -13,11 +13,13 @@ import { useState } from 'react';
 const JokeDetails = () => {
 
   const dispatch=useDispatch();
-  const navigate=useNavigate();
+   
   const {id}= useParams();
   const {jokeById, categoriesList} =useSelector((state)=>state.jokesSlice)
   const { colors} =useSelector((state)=>state.global)
   const [color, setColor]=useState('')
+  const [like, setLike]=useState(0)
+  const [dislike, setDislike]=useState(0)
   useEffect(()=>{
     
     
@@ -39,10 +41,33 @@ const JokeDetails = () => {
     
   },[id])
   const onLikeAJoke=()=>{
-        dispatch(updateJokeLikes())
-  }
-  const onDislikeAJoke=()=>{
-        dispatch(updateJokeDislikes())
+         if(like==0){
+          setLike(1)
+    dispatch(updateJokeLikes({type : 'increment'}))
+    document.getElementById('like').disabled =true
+            if(dislike>0){
+              setDislike(0)
+      document.getElementById('dislike').disabled  =false
+      dispatch(updateJokeDislikes({type : 'decrement'}))
+              
+            }
+         }
+       
+       
+      }
+      const onDislikeAJoke=()=>{
+        if(dislike==0){
+          setDislike(1)
+    dispatch(updateJokeDislikes({type : 'increment'}))
+    document.getElementById('dislike').disabled =true
+            if(like>0){
+              setLike(0)
+      document.getElementById('like').disabled  =false
+      dispatch(updateJokeLikes({type : 'decrement'}))
+              
+            }
+         }
+       
   }
 
   return (

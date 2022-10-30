@@ -138,12 +138,40 @@ export const JokesSlice =createSlice({
             state.isError = false;
             state.message = "";
           },
-        updateJokeLikes: (state) => {
+        updateJokeLikes: (state,action) => {
+         switch (action.payload.type) {
+            case 'increment' : 
+            
             state.jokeById={...state.jokeById, 'likes': state.jokeById.likes+1}
-           
+            break;
+            case 'decrement':
+             
+              state.jokeById={...state.jokeById, 'likes': state.jokeById.likes-1}
+              break;
+              default : 
+              
+              state.jokeById={...state.jokeById}
+            
+            }
+            
+            
           },
-          updateJokeDislikes: (state) => {
-            state.jokeById={...state.jokeById, 'dislikes': state.jokeById.dislikes+1}
+          updateJokeDislikes: (state,action) => {
+            switch (action.payload.type ) {
+              case 'increment' : 
+             
+              state.jokeById={...state.jokeById, 'dislikes': state.jokeById.dislikes+1}
+              break;
+              case 'decrement':
+               
+               state.jokeById={...state.jokeById, 'dislikes': state.jokeById.dislikes-1}
+               break;
+               default : 
+              
+               state.jokeById={...state.jokeById}
+             
+            }
+           
            
           },
 
